@@ -1,0 +1,11 @@
+nav {
+	background: rgb(27, 56, 89);
+}
+
+nav h1 {
+	color: white;
+}
+
+nav li a {
+	color: rgb(243, 246, 250);
+}

@@ -1,0 +1,170 @@
+<hitrecords>
+	<record genre="Ska">
+		<artist category="group" gender="male">Madness</artist>
+		<title>Baggy Trousers</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>30</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="solo" gender="female">Kate Bush</artist>
+		<title>Babooshka</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>50</seconds>
+		</length>
+	</record>
+	<record genre="Soft Rock">
+		<artist category="group" gender="male">Dire Straits</artist>
+		<title>Romeo and Juliet</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>15</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="solo" gender="male">David Bowie</artist>
+		<title>£</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>35</seconds>
+		</length>
+	</record>
+	<record genre="Ska">
+		<artist category="group" gender="male">The Specials</artist>
+		<title>Too Much Too Young</title>
+		<length>
+			<minutes>2</minutes>
+			<seconds>55</seconds>
+		</length>
+	</record>
+	<record genre="Punk">
+		<artist category="group" gender="male">The Clash</artist>
+		<title>London Calling</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>30</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="group" gender="mixed">Blondie</artist>
+		<title>Atomic</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>55</seconds>
+		</length>
+	</record>
+	<record genre="Soft Rock">
+		<artist category="group" gender="male">Genesis</artist>
+		<title>In the Air Tonight</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>25</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="solo" gender="male">John Lennon</artist>
+		<title>Woman</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>25</seconds>
+		</length>
+	</record>
+	<record genre="Punk">
+		<artist category="solo" gender="male">Captain Sensible</artist>
+		<title>Happy Talk</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>45</seconds>
+		</length>
+	</record>
+	<record genre="Disco">
+		<artist category="solo" gender="female">Kelly Marie</artist>
+		<title>Feels Like I'm in Love</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>35</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="duo" gender="male">Hall and Oats</artist>
+		<title>Man eater</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>0</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="duo" gender="male">Paul McCartney and Stevie Wonder</artist>
+		<title>Ebony and Ivory</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>10</seconds>
+		</length>
+	</record>
+	<record genre="Comedy">
+		<artist category="duo" gender="male">Chas 'n' Dave</artist>
+		<title>Rabbit</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>45</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="solo" gender="female">Madonna</artist>
+		<title>Like a Virgin</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>50</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="group" gender="male">The Beatles</artist>
+		<title>All You Need is Love</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>50</seconds>
+		</length>
+	</record>
+	<record genre="Ska">
+		<artist category="solo" gender="male">Prince Buster</artist>
+		<title>007</title>
+		<length>
+			<minutes>2</minutes>
+			<seconds>55</seconds>
+		</length>
+	</record>
+	<record genre="Pop">
+		<artist category="solo" gender="male">Elton John</artist>
+		<title>Candle in the Wind</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>10</seconds>
+		</length>
+	</record>
+	<record genre="Soft Rock">
+		<artist category="solo" gender="male">Brian Adams</artist>
+		<title>Summer 69</title>
+		<length>
+			<minutes>3</minutes>
+			<seconds>50</seconds>
+		</length>
+	</record>
+	<record genre="Soft Rock">
+		<artist category="solo" gender="female">Bonnie Tyler</artist>
+		<title>Total Eclipse of the Heart</title>
+		<length>
+			<minutes>5</minutes>
+			<seconds>0</seconds>
+		</length>
+	</record>
+	<record genre="Ska">
+		<artist category="group" gender="male">Madness</artist>
+		<title>It must be Love</title>
+		<length>
+			<minutes>4</minutes>
+			<seconds>10</seconds>
+		</length>
+	</record>
+</hitrecords>
