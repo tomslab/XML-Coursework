@@ -15,8 +15,6 @@
 </xsl:variable>
 
 <xsl:template name="show_title" match="/">
-    <div id="xml" data-xml="records.xml" data-xslt="param.xslt">
-        <xsl:attribute name="data-xsl-params">[{ "name" : "title", "value": "<xsl:value-of select="$title" />" }]</xsl:attribute>
     <!-- <xsl:param name="title" select="'Madness'" /> -->
     <p>Hello</p>
     <xsl:for-each select="hitrecords/record">
@@ -29,7 +27,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:for-each>
-</div>
 </xsl:template>
 
 </xsl:stylesheet>

@@ -13,15 +13,17 @@
 		<a href="test.html">Test site</a>
 
 		<p>
-			<select onChange="updateList(this.value)">
+			<select id="artistChoice" onChange="updateList(this.value)">
 				<option value="Madness">Madness</option>
 				<option value="Blondie">Blondie</option>
+				<option value="The Clash">The Clash</option>
+				<option value="John Lennon">John Lennon</option>
 			</select>
 		</p>
 
 	</header>
 
-	<div id="xml" data-xml="records.xml" data-xslt="param.xslt" data-xsl-params='[{ "name" : "title", "value": "Madness" }]'></div>
+	<div id="content"></div>
 
 	<footer>
 
@@ -29,19 +31,17 @@
 		<script type="text/javascript" src="m-xml.js"></script>
 		<script>
 			$('document').ready(function() {
+				var artistValue = $( '#artistChoice' ).val();
+				window.console.log(artistValue);
+				updateList(artistValue);
 				console.log('run parse');
-			var domElement = $("div")[0] // [0] returns the first DOM element that jQuery found
-			$(domElement.attributes).each(function(index, attribute) {
-				console.log("Attribute:"+attribute.nodeName+" | Value:"+attribute.nodeValue);
+				// magicXML.parse();
 			});
-			magicXML.parse("#xml");
-		});
 
 			function updateList(value) {
 				window.console.log(value);
-				console.log('foo');
-				$( '#xml' ).attr('data-xsl-params', '[{ "name" : "title", "value": "' + value + '" }]');
-				magicXML.transformAndReplace("#xml","records.xml","param.xslt",[{ "name" : "title", "value": value }]);
+				$( '#content' ).html('<div id="content-inner"></div>');
+				magicXML.transformAndReplace("#content-inner", "records.xml", "colorstyle.xslt", [{ "name" : "title", "value": value }]);
 			};
 		</script>
 	</footer>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<xsl:param name="title" />
+
 	<xsl:template match="/">
 		<!-- <xsl:param name="artist" select="Madness" /> -->
 		<html>
@@ -17,7 +20,7 @@
 								<xsl:value-of select="title"/>
 							</td>
 							<xsl:choose>
-								<xsl:when test="artist='Madness'">
+								<xsl:when test="artist=$title">
 									<td bgcolor="#ff00ff">
 										<xsl:value-of select="artist"/>
 									</td>
