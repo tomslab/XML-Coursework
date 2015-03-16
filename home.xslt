@@ -16,13 +16,15 @@
 
     <xsl:template name="show_title" match="/">
         <xsl:for-each select="movies/film">
-            <a href="movie.html?film={title}">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                <img src="{media/poster}" class="img-responsive" alt="{title} poster" />
+                <a href="movie.html?film={title}">
+                    <img src="{media/poster}" class="img-responsive" alt="{title} poster" />
+                </a>
                 <p>
-                    <strong><xsl:value-of select="title"/></strong><br />
+                    <span class="title"><strong><a href="movie.html?film={title}"><xsl:value-of select="title"/></a></strong></span>
+                    <br />
                     <xsl:for-each select="genres/genre">
-                        <span class="genre"><xsl:value-of select="."/></span>
+                        <span class="genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
                     </xsl:for-each>
                 </p>
                 <!-- <div class="panel panel-default">
@@ -45,7 +47,6 @@
                     </div>
                 </div> -->
             </div>
-        </a>
             <!-- <p><xsl:value-of select="title"/>, <xsl:value-of select="productionCompany"/></p>
             <img src="{media/poster}" /> -->
         </xsl:for-each>

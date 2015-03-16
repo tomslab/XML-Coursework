@@ -1,7 +1,7 @@
 <movies>
 	<film>
 		<title>Avengers: Age of Ulton</title>
-		<synopsis>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</synopsis>
+		<plot>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</plot>
 		<genres>
 			<genre>Action</genre>
 			<genre>Adventure</genre>
@@ -95,7 +95,7 @@
 	</film>
 	<film>
 		<title>Guardians of the Galaxy</title>
-		<synopsis>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</synopsis>
+		<plot>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</plot>
 		<genres>
 			<genre>Action</genre>
 			<genre>Adventure</genre>

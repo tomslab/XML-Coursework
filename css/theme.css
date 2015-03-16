@@ -10,12 +10,20 @@ nav li a {
 	color: rgb(243, 246, 250);
 }
 
+.breadcrumb {
+	margin-bottom: 0;
+}
+
 .subtle {
 	color: #CCC;
 	font-style: italic;
 }
 
-.genre {
+.title a {
+	color: #333;
+}
+
+.genre a {
 	color: #777;
 }
 
@@ -27,7 +35,7 @@ nav li a {
 	content: " | "
 }
 
-.genre:last-child:after {
+.genre:last-child:after, .movie-genre:last-child:after {
 	content: "";
 }
 

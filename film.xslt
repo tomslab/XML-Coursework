@@ -25,7 +25,7 @@
                     <h1><xsl:value-of select="title"/> (<xsl:value-of select="releaseDate/year"/>)</h1>
                     <p>
                         <xsl:for-each select="genres/genre">
-                            <span class="genre movie-genre"><xsl:value-of select="."/></span>
+                            <span class="movie-genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
                         </xsl:for-each>
                     </p>
                     <p id="ratingCalc" style="display: none;"><xsl:value-of select="( rating div 2 )"/></p>
@@ -34,10 +34,13 @@
                     <p>Director<br /><xsl:value-of select="crew/director"/></p>
                 </div>
 
-                <p><xsl:value-of select="synopsis"/></p>
+                <div class="col-xs-12">
+                    <h3>Plot</h3>
+                    <p><xsl:value-of select="plot"/></p>
+                </div>
 
                 <div id="crew" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <p>Crew</p>
+                    <h3>Crew</h3>
                     <p>Director <xsl:value-of select="crew/director"/></p>
                     <xsl:for-each select="crew/writers/writer">
                         <p>Writer <xsl:value-of select="."/></p>
@@ -45,7 +48,7 @@
                 </div>
 
                 <div id="cast" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <p>Cast</p>
+                    <h3>Cast</h3>
                     <xsl:for-each select="cast/character">
                         <p><xsl:value-of select="actor"/>, <xsl:value-of select="name"/></p>
                     </xsl:for-each>
