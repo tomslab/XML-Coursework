@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Test</title>
+	<title>Movie</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/theme.css">
 </head>
 
@@ -32,9 +33,6 @@
 				</ul>
 			</nav>
 			<main class="col-md-10">
-				<ol class="breadcrumb" style="margin-top: 20px;">
-					<li class="active">Home</li>
-				</ol>
 
 				<div class="row">
 
@@ -54,21 +52,60 @@
 		<script type="text/javascript" src="m-xml.js"></script>
 		<script>
 			$('document').ready(function() {
+
+				var film = getQueryVariable('film');
+				var film = film.replace(/%20/g, " ");
+				window.console.log(film);
+
 				// var artistValue = $( '#artistChoice' ).val();
 				// window.console.log(artistValue);
-				updateList("hello");
+				updateList(film);
 				// console.log('run parse');
 				// magicXML.parse();
+
+				var filmRating = $('#ratingCalc').text();
+				if( filmRating != NaN ) {
+					var filmRating = parseFloat(filmRating);
+					var filmRating = Math.round( filmRating );
+					if( filmRating > 5 ) {
+						filmRating = 5;
+					}
+					window.console.log( filmRating );
+					var filmRatingBuilder = '';
+					for( var i = 0; i < filmRating; i++ ) {
+						var filmRatingBuilder = filmRatingBuilder + '<i class="fa fa-star"></i>';
+					}
+					if( filmRating != 5 ) {
+						var filmRatingRemaining = 5 - filmRating;
+						for( var i = 0; i < filmRatingRemaining; i++ ) {
+							var filmRatingBuilder = filmRatingBuilder + '<i class="fa fa-star-o"></i>';
+						}
+					}
+					// <i class="fa fa-star"></i>
+					$( '#ratingContainer' ).html( filmRatingBuilder );
+				} else {
+					$( '#ratingContainer' ).html( "Not rated" );
+				}
+
 			});
 
+			function getQueryVariable(variable) {
+				var query = window.location.search.substring(1);
+				var vars = query.split("&");
+				for (var i=0;i<vars.length;i++) {
+					var pair = vars[i].split("=");
+					if(pair[0] == variable){return pair[1];}
+				}
+				return(false);
+			}
+
 			function updateList(value) {
-				window.console.log(value);
 				$( '#content' ).html('<div id="content-inner"></div>');
-				magicXML.transformAndReplace("#content-inner", "movies.xml", "home.xslt", [{ "name" : "title", "value": value }]);
+				magicXML.transformAndReplace("#content-inner", "movies.xml", "film.xslt", [{ "name" : "title", "value": value }]);
 			};
 		</script>
 	</footer>
 
 </body>
-
+		
 </html>

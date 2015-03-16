@@ -9,3 +9,30 @@ nav h1 {
 nav li a {
 	color: rgb(243, 246, 250);
 }
+
+.subtle {
+	color: #CCC;
+	font-style: italic;
+}
+
+.genre {
+	color: #777;
+}
+
+.genre:after {
+	content: ", ";
+}
+
+.movie-genre:after {
+	content: " | "
+}
+
+.genre:last-child:after {
+	content: "";
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	border-radius: 0;
+	color: whiteSmoke;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}

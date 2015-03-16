@@ -1,0 +1,152 @@
+<movies>
+	<film>
+		<title>Avengers: Age of Ulton</title>
+		<synopsis>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</synopsis>
+		<genres>
+			<genre>Action</genre>
+			<genre>Adventure</genre>
+			<genre>Fantasy</genre>
+		</genres>
+		<certificate>Unknown</certificate>
+		<rating></rating>
+		<releaseDate>
+			<year>2015</year>
+			<month>May</month>
+			<day>1</day>
+		</releaseDate>
+		<productionCompany>Marvel Studios</productionCompany>
+		<runtime>
+			<hours>2</hours>
+			<minutes>30</minutes>
+		</runtime>
+		<media>
+			<poster>img/avengers_age_of_ultron_poster.jpg</poster>
+			<hero>img/avengers_age_of_ultron_hero.jpg</hero>
+		</media>
+		<crew>
+			<director>Joss Whedon</director>
+			<writers>
+				<writer>Joss Whedon</writer>
+				<writer>Stan Lee</writer>
+				<writer>Jack Kirby</writer>
+			</writers>
+		</crew>
+		<cast>
+			<character>
+				<actor>Scarlett Johansson</actor>
+				<name>Natasha Romanoff / Black Widow</name>
+			</character>
+			<character>
+				<actor>Hayley Atwell</actor>
+				<name>Peggy Carter</name>
+			</character>
+			<character>
+				<actor>Aaron Taylor-Johnson</actor>
+				<name>Pietro Maximoff / Quicksilver</name>
+			</character>
+		</cast>
+	</film>
+	<film>
+		<title>Inside Out</title>
+		<genres>
+			<genre>Animation</genre>
+			<genre>Comedy</genre>
+			<genre>Family</genre>
+		</genres>
+		<certificate>Unknown</certificate>
+		<releaseDate>
+			<year>2015</year>
+			<month>June</month>
+			<day>19</day>
+		</releaseDate>
+		<productionCompany>Pixar</productionCompany>
+		<runtime>
+			<hours></hours>
+			<minutes></minutes>
+		</runtime>
+		<media>
+			<poster>img/inside_out_poster.jpg</poster>
+			<hero>img/inside_out_hero.jpg</hero>
+		</media>
+	</film>
+	<film>
+		<title>American Sniper</title>
+		<genres>
+			<genre>Action</genre>
+			<genre>Biography</genre>
+			<genre>Drama</genre>
+		</genres>
+		<certificate>R</certificate>
+		<rating>7.4</rating>
+		<releaseDate>
+			<year>2015</year>
+			<month>Janurary</month>
+			<day>16</day>
+		</releaseDate>
+		<productionCompany>Warner Bros.</productionCompany>
+		<runtime>
+			<hours>2</hours>
+			<minutes>12</minutes>
+		</runtime>
+		<media>
+			<poster>img/american_sniper_poster.jpg</poster>
+			<hero>img/american_sniper_hero.jpg</hero>
+		</media>
+	</film>
+	<film>
+		<title>Guardians of the Galaxy</title>
+		<synopsis>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</synopsis>
+		<genres>
+			<genre>Action</genre>
+			<genre>Adventure</genre>
+			<genre>Sci-Fi</genre>
+		</genres>
+		<certificate>PG-13</certificate>
+		<rating>8.2</rating>
+		<releaseDate>
+			<year>2014</year>
+			<month>August</month>
+			<day>1</day>
+		</releaseDate>
+		<productionCompany>Marvel Studios</productionCompany>
+		<runtime>
+			<hours>2</hours>
+			<minutes>1</minutes>
+		</runtime>
+		<media>
+			<poster>img/guardians_of_the_galaxy_poster.jpg</poster>
+			<hero>img/guardians_of_the_galaxy_hero.jpg</hero>
+		</media>
+		<crew>
+			<director>James Gunn</director>
+			<writers>
+				<writer>James Gunn</writer>
+				<writer>Nicole Perlman</writer>
+				<writer>Dan Abnett</writer>
+				<writer>Andy Lanning</writer>
+			</writers>
+		</crew>
+		<cast>
+			<character>
+				<actor>Chris Pratt</actor>
+				<name>Peter Quill</name>
+			</character>
+			<character>
+				<actor>Zoe Saldana</actor>
+				<name>Gamora</name>
+			</character>
+			<character>
+				<actor>Dave Bautista</actor>
+				<name>Drax</name>
+			</character>
+			<character>
+				<actor>Vin Diesel</actor>
+				<name>Groot</name>
+			</character>
+			<character>
+				<actor>Bradley Cooper</actor>
+				<name>Rocket</name>
+			</character>
+		</cast>
+	</film>
+</movies>
