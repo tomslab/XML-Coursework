@@ -4,3 +4,4 @@ config.codekit
 
 ### Img ###
 # Image directory to ignore
+/img
