@@ -1,6 +1,9 @@
 <movies>
-	<film>
-		<title>Avengers: Age of Ulton</title>
+	<film id="1">
+		<titles>
+			<title>Avengers</title>
+			<subtitle>Age of Ultron</subtitle>
+		</titles>
 		<plot>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</plot>
 		<genres>
 			<genre>Action</genre>
@@ -46,8 +49,60 @@
 			</character>
 		</cast>
 	</film>
-	<film>
-		<title>Inside Out</title>
+	<film id="2">
+		<titles>
+			<title>Avengers</title>
+			<subtitle>Assemble</subtitle>
+		</titles>
+		<plot>Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</plot>
+		<genres>
+			<genre>Action</genre>
+			<genre>Adventure</genre>
+			<genre>Sci-Fi</genre>
+		</genres>
+		<certificate>PG-13</certificate>
+		<rating>8.2</rating>
+		<releaseDate>
+			<year>2012</year>
+			<month>May</month>
+			<day>4</day>
+		</releaseDate>
+		<productionCompany>Marvel Studios</productionCompany>
+		<runtime>
+			<hours>2</hours>
+			<minutes>23</minutes>
+		</runtime>
+		<media>
+			<poster>img/avengers_assemble_poster.jpg</poster>
+			<hero>img/avengers_assemble_hero.jpg</hero>
+			<trailer>https://www.youtube.com/embed/NPoHPNeU9fc</trailer>
+		</media>
+		<crew>
+			<director>Joss Whedon</director>
+			<writers>
+				<writer>Joss Whedon</writer>
+				<writer>Zak Penn</writer>
+			</writers>
+		</crew>
+		<cast>
+			<character>
+				<actor>Robert Downey Jr.</actor>
+				<name>Tony Stark / Iron Man</name>
+			</character>
+			<character>
+				<actor>Chris Evans</actor>
+				<name>Steve Rogers / Captain America</name>
+			</character>
+			<character>
+				<actor>Mark Ruffalo</actor>
+				<name>Bruce Banner / The Hulk</name>
+			</character>
+		</cast>
+	</film>
+	<film id="3">
+		<titles>
+			<title>Inside Out</title>
+		</titles>
 		<genres>
 			<genre>Animation</genre>
 			<genre>Comedy</genre>
@@ -69,8 +124,10 @@
 			<hero>img/inside_out_hero.jpg</hero>
 		</media>
 	</film>
-	<film>
-		<title>American Sniper</title>
+	<film id="4">
+		<titles>
+			<title>American Sniper</title>
+		</titles>
 		<genres>
 			<genre>Action</genre>
 			<genre>Biography</genre>
@@ -93,8 +150,10 @@
 			<hero>img/american_sniper_hero.jpg</hero>
 		</media>
 	</film>
-	<film>
-		<title>Guardians of the Galaxy</title>
+	<film id="5">
+		<titles>
+			<title>Guardians of the Galaxy</title>
+		</titles>
 		<plot>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</plot>
 		<genres>
 			<genre>Action</genre>

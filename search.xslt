@@ -19,18 +19,19 @@
             <li><a href="/">Home</a></li>
             <li class="active"><xsl:value-of select="$genre"/></li>
         </ol>
+        <div class="clearfix" style="margin-bottom: 20px;"></div>
         <xsl:for-each select="movies/film">
             <xsl:choose>
                 <xsl:when test="genres/genre=$genre">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-                        <a href="movie.html?film={title}">
+                        <a href="movie.php?id={@id}">
                             <img src="{media/poster}" class="img-responsive" alt="{title} poster" />
                         </a>
                         <p>
-                            <span class="title"><strong><a href="movie.html?film={title}"><xsl:value-of select="title"/></a></strong></span>
+                            <span class="title"><strong><a href="movie.php?film={title}"><xsl:value-of select="title"/></a></strong></span>
                             <br />
                             <xsl:for-each select="genres/genre">
-                                <span class="genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
+                                <span class="genre"><a href="genre.php?genre={.}"><xsl:value-of select="."/></a></span>
                             </xsl:for-each>
                         </p>
                     </div>

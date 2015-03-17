@@ -2,7 +2,8 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:param name="title" />
+    <xsl:param name="id" />
+    <!-- <xsl:value-of select="@id"/> -->
 
     <xsl:variable name="xx">
         <html>
@@ -16,13 +17,20 @@
 
     <xsl:template name="show_title" match="/">
         <xsl:for-each select="movies/film">
-            <xsl:if test="title=$title">
+            <xsl:if test="@id=$id">
                 <ol class="breadcrumb">
                     <li><a href="/">Home</a></li>
-                    <li class="active"><xsl:value-of select="title"/></li>
+                    <li class="active"><xsl:value-of select="titles/title"/>&#160;<xsl:value-of select="titles/subtitle"/></li>
                 </ol>
-                <div class="jumbotron" style="background-image: url('{media/hero}'); background-size: cover;">
-                    <h1><xsl:value-of select="title"/> (<xsl:value-of select="releaseDate/year"/>)</h1>
+                <div class="jumbotron" style="background-image: url('{media/hero}'); background-size: cover; background-position: center 30%;">
+                    <h1>
+                        <xsl:value-of select="titles/title"/>
+                        <xsl:choose>
+                            <xsl:when test="titles/subtitle!=''">
+                                &#160;<span class="light">(&#160;<xsl:value-of select="titles/subtitle"/>&#160;)</span>
+                            </xsl:when>
+                        </xsl:choose>
+                    </h1>
                     <p>
                         <xsl:for-each select="genres/genre">
                             <span class="movie-genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
@@ -54,8 +62,15 @@
                     </xsl:for-each>
                 </div>
 
+                <div id="trailer" class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="{media/trailer}"></iframe>
+                    </div>
+                </div>
+
 
             </xsl:if>
+            <div class="clearfix"></div>
         </xsl:for-each>
         <!-- <xsl:for-each select="movies/film">
             <a href="movie.html?film={title}">
