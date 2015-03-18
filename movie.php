@@ -24,6 +24,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="m-xml.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script>
 		$('document').ready(function() {
 
@@ -67,7 +68,36 @@
 					$( '#category-dropdown' ).slideToggle( 1000, "easeOutExpo" );
 				});
 
-			});
+
+				var affixDist = $( '#movieLeft' ).offset().top - 20;
+				$('#movieLeft').affix({
+					offset: {
+						top: affixDist
+					}
+				});
+
+				$( window ).scroll( function() {
+					var affixWidth = $( '#movieLeft' ).parent('div').width();
+					// window.console.log(affixWidth);
+					$( '#movieLeft' ).css( 'max-width', affixWidth );
+				});
+
+				// var affixDist = $( '#movieLeft' ).offset().top;
+				// window.console.log(affixDist);
+				// $( window ).scroll( function() {
+				// 	var scrollTop = $(window).scrollTop();
+				// 	//window.console.log(scrollTop);
+				// 	if( affixDist <= scrollTop ) {
+				// 		//window.console.log(affixWidth);
+				// 		$( '#movieLeft' ).addClass( 'affix-top' );
+				// 		$( '#movieRight' ).addClass( 'col-md-offset-3' );
+				// 	} else {
+				// 		$( '#movieLeft' ).removeClass( 'affix-top' );
+				// 		$( '#movieRight' ).removeClass( 'col-md-offset-3' );
+				// 	}
+				// })
+
+});
 
 function getQueryVariable(variable) {
 	var query = window.location.search.substring(1);

@@ -30,10 +30,10 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                     <div class="row">
                         <div class="col-md-2">
-                            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                            <i class="fa fa-paint-brush"></i>
                         </div>
                         <div class="col-md-7">
-                            Category
+                            Genre
                         </div>
                         <div class="col-md-3">
                             <span class="caret"></span>
@@ -42,16 +42,62 @@
                 </a>
             </li>
             <ul class="nav nav-pills nav-stacked" id="category-dropdown" style="display:none;">
-                <xsl:for-each select="movies/film/genres/genre[not(.=preceding::*)]">
+                <xsl:for-each select="movies/film/story/genres/genre[not(.=preceding::*)]">
                     <xsl:sort select="."/>
                     <li role="presentation"><a href="genre.php?genre={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
                         <xsl:value-of select="."/>
                     </div></div></a></li>
                 </xsl:for-each>
             </ul>
+            <li role="presentation" class="dropdown" id="certificate">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <i class="fa fa-certificate"></i>
+                        </div>
+                        <div class="col-md-7">
+                            Certificate
+                        </div>
+                        <div class="col-md-3">
+                            <span class="caret"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <ul class="nav nav-pills nav-stacked" id="certificate-dropdown" style="display:none;">
+                <xsl:for-each select="movies/film/details/certificate[not(.=preceding::*)]">
+                    <xsl:sort select="."/>
+                    <li role="presentation"><a href="certificate.php?cert={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
+                        <xsl:value-of select="."/>
+                    </div></div></a></li>
+                </xsl:for-each>
+            </ul>
+            <li role="presentation" class="dropdown" id="rating">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+                        <div class="col-md-7">
+                            Rating
+                        </div>
+                        <div class="col-md-3">
+                            <span class="caret"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <ul class="nav nav-pills nav-stacked" id="rating-dropdown" style="display:none;">
+                <xsl:for-each select="movies/film/details/rating[not(.=preceding::*)]">
+                    <xsl:sort select="."/>
+                    <li role="presentation"><a href="rating.php?rating={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
+                        <xsl:value-of select="."/>
+                    </div></div></a></li>
+                </xsl:for-each>
+            </ul>
             <li role="presentation"><a href="#"><div class="row">
                 <div class="col-md-2">
-                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                    <i class="fa fa-graduation-cap"></i>
                 </div>
                 <div class="col-md-10">
                     About

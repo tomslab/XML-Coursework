@@ -1,0 +1,58 @@
+<movies>
+	<film id="">
+		<titles>
+			<title></title>
+			<subtitle></subtitle>
+		</titles>
+		<story>
+			<plot></plot>
+			<genres>
+				<genre></genre>
+			</genres>
+		</story>
+		<details>
+			<releaseDate>
+				<year></year>
+				<month></month>
+				<day></day>
+			</releaseDate>
+			<runtime>
+				<hours></hours>
+				<minutes></minutes>
+			</runtime>
+			<certificate></certificate>
+			<rating></rating>
+			<companyCredits>
+				<productionCompany></productionCompany>
+			</companyCredits>
+			<languages>
+				<language></language>
+			</languages>
+			<boxOffice>
+				<budget estimated=""></budget>
+				<openingWeekend country=""></openingWeekend>
+				<gross county="" date=""></gross>
+			</boxOffice>
+		</details>
+		<media>
+			<poster></poster>
+			<hero></hero>
+			<gallery>
+				<photo></photo>
+			</gallery>
+			<trailer service=""></trailer>
+			<soundtrack service=""></soundtrack>
+		</media>
+		<crew>
+			<director></director>
+			<writers>
+				<writer></writer>
+			</writers>
+		</crew>
+		<cast>
+			<character>
+				<actor></actor>
+				<name></name>
+			</character>
+		</cast>
+	</film>

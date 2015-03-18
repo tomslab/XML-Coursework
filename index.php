@@ -32,9 +32,10 @@
 
 				updateSidebar();
 
-				updateList('releaseDate', 'descending');
-				$( '#releaseDate' ).css('color','#333');
-				$( '#releaseDate' ).css('font-weight','700');
+				updateList('details/releaseDate', 'descending');
+				$( '#filterReleaseDate' ).css('color','#333');
+				$( '#filterReleaseDate' ).css('font-weight','700');
+				window.console.log('foo');
 
 				rebindEvents();
 
@@ -42,6 +43,18 @@
 				// magicXML.parse();
 				$( '#category' ).click( function() {
 					$( '#category-dropdown' ).slideToggle( 1000, "easeOutExpo" );
+					$( '#certificate-dropdown' ).slideUp( 1000, "easeOutExpo" );
+					$( '#rating-dropdown' ).slideUp( 1000, "easeOutExpo" );
+				});
+				$( '#certificate' ).click( function() {
+					$( '#certificate-dropdown' ).slideToggle( 1000, "easeOutExpo" );
+					$( '#category-dropdown' ).slideUp( 1000, "easeOutExpo" );
+					$( '#rating-dropdown' ).slideUp( 1000, "easeOutExpo" );
+				});
+				$( '#rating' ).click( function() {
+					$( '#rating-dropdown' ).slideToggle( 1000, "easeOutExpo" );
+					$( '#certificate-dropdown' ).slideUp( 1000, "easeOutExpo" );
+					$( '#category-dropdown' ).slideUp( 1000, "easeOutExpo" );
 				});
 			});
 
@@ -51,18 +64,18 @@
 				switch( elementVal ) {
 					case "Alphabetical":
 						updateList('titles', 'ascending');
-						$( '#titles' ).css('color','#333');
-						$( '#titles' ).css('font-weight','700');
+						$( '#filterTitles' ).css('color','#333');
+						$( '#filterTitles' ).css('font-weight','700');
 						break;
 					case "Highest rated":
-						updateList('rating', 'descending');
-						$( '#rating' ).css('color','#333');
-						$( '#rating' ).css('font-weight','700');
+						updateList('details/rating', 'descending');
+						$( '#filterRating' ).css('color','#333');
+						$( '#filterRating' ).css('font-weight','700');
 						break;
 					case "Most recent":
-						updateList('releaseDate', 'descending');
-						$( '#releaseDate' ).css('color','#333');
-						$( '#releaseDate' ).css('font-weight','700');
+						updateList('details/releaseDate', 'descending');
+						$( '#filterReleaseDate' ).css('color','#333');
+						$( '#filterReleaseDate' ).css('font-weight','700');
 						break;
 					default:
 						window.console.log('default');

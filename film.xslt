@@ -32,42 +32,86 @@
                         </xsl:choose>
                     </h1>
                     <p>
-                        <xsl:for-each select="genres/genre">
+                        <xsl:for-each select="story/genres/genre">
                             <span class="movie-genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
                         </xsl:for-each>
                     </p>
                     <p id="ratingCalc" style="display: none;"><xsl:value-of select="( rating div 2 )"/></p>
                     <p id="ratingContainer"></p>
-                    <p>Certificate<br /><xsl:value-of select="certificate"/></p>
+                    <p>Certificate<br /><xsl:value-of select="details/certificate"/></p>
                     <p>Director<br /><xsl:value-of select="crew/director"/></p>
                 </div>
 
-                <div class="col-xs-12">
-                    <h3>Plot</h3>
-                    <p><xsl:value-of select="plot"/></p>
-                </div>
+                <article>
 
-                <div id="crew" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h3>Crew</h3>
-                    <p>Director <xsl:value-of select="crew/director"/></p>
-                    <xsl:for-each select="crew/writers/writer">
-                        <p>Writer <xsl:value-of select="."/></p>
-                    </xsl:for-each>
-                </div>
+                    <div class="col-md-3">
+                        <div id="movieLeft">
+                            <h2><i class="fa fa-film"></i>&#160;Information</h2>
+                            <img src="{media/poster}" class="img-responsive rounded" alt="{title} poster" />
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <p><i class="fa fa-clock-o"></i></p>
+                                </div>
+                                <div class="col-xs-10">
+                                    <p>Duration&#160;<xsl:value-of select="(details/runtime/hours * 60) + details/runtime/minutes"/>&#160;minutes</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <p><i class="fa fa-video-camera"></i></p>
+                                </div>
+                                <div class="col-xs-10">
+                                    <p><xsl:for-each select="details/companyCredits/productionCompany">
+                                        <span class="writtenList"><xsl:value-of select="."/></span>
+                                    </xsl:for-each></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <p><i class="fa fa-trophy"></i></p>
+                                </div>
+                                <div class="col-xs-10">
+                                    <p>x awards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div id="cast" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h3>Cast</h3>
-                    <xsl:for-each select="cast/character">
-                        <p><xsl:value-of select="actor"/>, <xsl:value-of select="name"/></p>
-                    </xsl:for-each>
-                </div>
+                    <div id="movieRight" class="col-md-9">
+                        <h2><i class="fa fa-desktop"></i>&#160;Trailer</h2>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{media/trailer}?wmode=transparent&#38;showinfo=0&#38;iv_load_policy=3&#38;rel=0&#38;vq=HD1080"></iframe>
+                        </div>
 
-                <div id="trailer" class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                        <div class="col-xs-12" style="padding-bottom: 100px; background: rgb(253, 253, 192);">
+                            <h3>Plot</h3>
+                            <p><xsl:value-of select="story/plot"/></p>
+                        </div>
+
+                        <div id="crew" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <h3>Crew</h3>
+                            <p>Director <xsl:value-of select="crew/director"/></p>
+                            <xsl:for-each select="crew/writers/writer">
+                                <p>Writer <xsl:value-of select="."/></p>
+                            </xsl:for-each>
+                        </div>
+
+                        <div id="cast" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <h3>Cast</h3>
+                            <xsl:for-each select="cast/character">
+                                <p><a href="name.php?name={actor}"><xsl:value-of select="actor"/></a>, <xsl:value-of select="name"/></p>
+                            </xsl:for-each>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- <div id="trailer" class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="{media/trailer}"></iframe>
                     </div>
-                </div>
-
+                </div> -->
 
             </xsl:if>
             <div class="clearfix"></div>

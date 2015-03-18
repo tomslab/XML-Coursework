@@ -1,30 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE movies
+[
+<!ENTITY act "Action">
+<!ENTITY adv "Adventure">
+<!ENTITY ani "Animation">
+<!ENTITY bio "Biography">
+<!ENTITY com "Comedy">
+<!ENTITY dra "Drama">
+<!ENTITY fam "Family">
+<!ENTITY fan "Fantasy">
+<!ENTITY sci "Sci-Fi">
+
+<!ENTITY mvs "Marvel Studios">
+<!ENTITY para "Paramount Pictures">
+]>
 <movies>
 	<film id="1">
 		<titles>
 			<title>Avengers</title>
 			<subtitle>Age of Ultron</subtitle>
 		</titles>
-		<plot>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</plot>
-		<genres>
-			<genre>Action</genre>
-			<genre>Adventure</genre>
-			<genre>Fantasy</genre>
-		</genres>
-		<certificate>Unknown</certificate>
-		<rating></rating>
-		<releaseDate>
-			<year>2015</year>
-			<month>May</month>
-			<day>1</day>
-		</releaseDate>
-		<productionCompany>Marvel Studios</productionCompany>
-		<runtime>
-			<hours>2</hours>
-			<minutes>30</minutes>
-		</runtime>
+		<story>
+			<plot>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</plot>
+			<genres>
+				<genre>&act;</genre>
+				<genre>&adv;</genre>
+				<genre>&fan;</genre>
+				<genre>&sci;</genre>
+			</genres>
+		</story>
+		<details>
+			<releaseDate>
+				<year>2015</year>
+				<month>May</month>
+				<day>1</day>
+			</releaseDate>
+			<runtime>
+				<hours>2</hours>
+				<minutes>30</minutes>
+			</runtime>
+			<certificate></certificate>
+			<rating></rating>
+			<companyCredits>
+				<productionCompany>&mvs;</productionCompany>
+			</companyCredits>
+			<languages>
+				<language></language>
+			</languages>
+			<boxOffice>
+				<budget estimated=""></budget>
+				<openingWeekend country=""></openingWeekend>
+				<gross county="" date=""></gross>
+			</boxOffice>
+		</details>
 		<media>
 			<poster>img/avengers_age_of_ultron_poster.jpg</poster>
 			<hero>img/avengers_age_of_ultron_hero.jpg</hero>
+			<gallery>
+				<photo></photo>
+			</gallery>
+			<trailer service="youtube">PqkR0SwFN_4</trailer>
+			<soundtrack service=""></soundtrack>
 		</media>
 		<crew>
 			<director>Joss Whedon</director>
@@ -54,28 +90,51 @@
 			<title>Avengers</title>
 			<subtitle>Assemble</subtitle>
 		</titles>
-		<plot>Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</plot>
-		<genres>
-			<genre>Action</genre>
-			<genre>Adventure</genre>
-			<genre>Sci-Fi</genre>
-		</genres>
-		<certificate>PG-13</certificate>
-		<rating>8.2</rating>
-		<releaseDate>
-			<year>2012</year>
-			<month>May</month>
-			<day>4</day>
-		</releaseDate>
-		<productionCompany>Marvel Studios</productionCompany>
-		<runtime>
-			<hours>2</hours>
-			<minutes>23</minutes>
-		</runtime>
+		<story>
+			<plot>Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</plot>
+			<genres>
+				<genre>&act;</genre>
+				<genre>&adv;</genre>
+				<genre>&sci;</genre>
+			</genres>
+		</story>
+		<details>
+			<releaseDate>
+				<year>2012</year>
+				<month>May</month>
+				<day>4</day>
+			</releaseDate>
+			<runtime>
+				<hours>2</hours>
+				<minutes>23</minutes>
+			</runtime>
+			<certificate>12A</certificate>
+			<rating>8.2</rating>
+			<companyCredits>
+				<productionCompany>&mvs;</productionCompany>
+				<productionCompany>&para;</productionCompany>
+			</companyCredits>
+			<languages>
+				<language>English</language>
+				<language>Russian</language>
+			</languages>
+			<boxOffice>
+				<budget estimated="true">220000000</budget>
+				<openingWeekend country="USA">207438708</openingWeekend>
+				<gross county="USA" date="28 September 2012">623279547</gross>
+			</boxOffice>
+		</details>
 		<media>
 			<poster>img/avengers_assemble_poster.jpg</poster>
 			<hero>img/avengers_assemble_hero.jpg</hero>
-			<trailer>https://www.youtube.com/embed/NPoHPNeU9fc</trailer>
+			<gallery>
+				<photo></photo>
+				<photo></photo>
+				<photo></photo>
+				<photo></photo>
+			</gallery>
+			<trailer service="youtube">NPoHPNeU9fc</trailer>
+			<soundtrack service="spotify">3A4woJ0YJRcxxt2VrdVJ6ERW</soundtrack>
 		</media>
 		<crew>
 			<director>Joss Whedon</director>
@@ -97,41 +156,118 @@
 				<actor>Mark Ruffalo</actor>
 				<name>Bruce Banner / The Hulk</name>
 			</character>
+			<character>
+				<actor>Chris Hemsworth</actor>
+				<name>Thor</name>
+			</character>
+			<character>
+				<actor>Scarlett Johansson</actor>
+				<name>Natasha Romanoff / Black Widow</name>
+			</character>
+			<character>
+				<actor>Jeremy Renner</actor>
+				<name>Clint Barton / Hawkeye</name>
+			</character>
+			<character>
+				<actor>Tom Hiddleston</actor>
+				<name>Loki</name>
+			</character>
+			<character>
+				<actor>Clark Gregg</actor>
+				<name>Agent Phil Coulson</name>
+			</character>
+			<character>
+				<actor>Cobie Smulders</actor>
+				<name>Agent Maria Hill</name>
+			</character>
+			<character>
+				<actor>Stellan Skarsg&#229;rd</actor>
+				<name>Selvig</name>
+			</character>
+			<character>
+				<actor>Samuel L. Jackson</actor>
+				<name>Nick Fury</name>
+			</character>
+			<character>
+				<actor>Gwyneth Paltrow</actor>
+				<name>Pepper Potts</name>
+			</character>
+			<character>
+				<actor>Paul Bettany</actor>
+				<name>Jarvis</name>
+			</character>
+			<character>
+				<actor>Alexis Denisof</actor>
+				<name>The Other</name>
+			</character>
 		</cast>
 	</film>
 	<film id="3">
 		<titles>
 			<title>Inside Out</title>
 		</titles>
-		<genres>
-			<genre>Animation</genre>
-			<genre>Comedy</genre>
-			<genre>Family</genre>
-		</genres>
-		<certificate>Unknown</certificate>
-		<releaseDate>
-			<year>2015</year>
-			<month>June</month>
-			<day>19</day>
-		</releaseDate>
-		<productionCompany>Pixar</productionCompany>
-		<runtime>
-			<hours></hours>
-			<minutes></minutes>
-		</runtime>
+		<story>
+			<plot>After a girl moves to a new home, her emotions are plunged into chaos as they compete for control of her mind.</plot>
+			<genres>
+				<genre>&ani;</genre>
+				<genre>&com;</genre>
+				<genre>&fam;</genre>
+			</genres>
+		</story>
+		<details>
+			<releaseDate>
+				<year>2015</year>
+				<month>June</month>
+				<day>19</day>
+			</releaseDate>
+			<runtime>
+				<hours></hours>
+				<minutes></minutes>
+			</runtime>
+			<certificate></certificate>
+			<rating></rating>
+			<companyCredits>
+				<productionCompany>Pixar</productionCompany>
+			</companyCredits>
+			<languages>
+				<language></language>
+			</languages>
+			<boxOffice>
+				<budget estimated=""></budget>
+				<openingWeekend country=""></openingWeekend>
+				<gross county="" date=""></gross>
+			</boxOffice>
+		</details>
 		<media>
 			<poster>img/inside_out_poster.jpg</poster>
 			<hero>img/inside_out_hero.jpg</hero>
+			<gallery>
+				<photo></photo>
+			</gallery>
+			<trailer service="youtube">_MC3XuMvsDI</trailer>
+			<soundtrack service=""></soundtrack>
 		</media>
+		<crew>
+			<director></director>
+			<writers>
+				<writer></writer>
+			</writers>
+		</crew>
+		<cast>
+			<character>
+				<actor></actor>
+				<name></name>
+			</character>
+		</cast>
 	</film>
-	<film id="4">
+	<!-- <film id="4">
 		<titles>
 			<title>American Sniper</title>
 		</titles>
 		<genres>
-			<genre>Action</genre>
-			<genre>Biography</genre>
-			<genre>Drama</genre>
+			<genre>&act;</genre>
+			<genre>&bio;</genre>
+			<genre>&dra;</genre>
 		</genres>
 		<certificate>R</certificate>
 		<rating>7.4</rating>
@@ -149,32 +285,51 @@
 			<poster>img/american_sniper_poster.jpg</poster>
 			<hero>img/american_sniper_hero.jpg</hero>
 		</media>
-	</film>
+	</film> -->
 	<film id="5">
 		<titles>
 			<title>Guardians of the Galaxy</title>
 		</titles>
-		<plot>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</plot>
-		<genres>
-			<genre>Action</genre>
-			<genre>Adventure</genre>
-			<genre>Sci-Fi</genre>
-		</genres>
-		<certificate>PG-13</certificate>
-		<rating>8.2</rating>
-		<releaseDate>
-			<year>2014</year>
-			<month>August</month>
-			<day>1</day>
-		</releaseDate>
-		<productionCompany>Marvel Studios</productionCompany>
-		<runtime>
-			<hours>2</hours>
-			<minutes>1</minutes>
-		</runtime>
+		<story>
+			<plot>A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</plot>
+			<genres>
+				<genre>&act;</genre>
+				<genre>&adv;</genre>
+				<genre>&sci;</genre>
+			</genres>
+		</story>
+		<details>
+			<releaseDate>
+				<year>2014</year>
+				<month>August</month>
+				<day>1</day>
+			</releaseDate>
+			<runtime>
+				<hours>2</hours>
+				<minutes>1</minutes>
+			</runtime>
+			<certificate>PG-13</certificate>
+			<rating>8.2</rating>
+			<companyCredits>
+				<productionCompany>&mvs;</productionCompany>
+			</companyCredits>
+			<languages>
+				<language></language>
+			</languages>
+			<boxOffice>
+				<budget estimated=""></budget>
+				<openingWeekend country=""></openingWeekend>
+				<gross county="" date=""></gross>
+			</boxOffice>
+		</details>
 		<media>
 			<poster>img/guardians_of_the_galaxy_poster.jpg</poster>
 			<hero>img/guardians_of_the_galaxy_hero.jpg</hero>
+			<gallery>
+				<photo></photo>
+			</gallery>
+			<trailer service="youtube">d96cjJhvlMA</trailer>
+			<soundtrack service=""></soundtrack>
 		</media>
 		<crew>
 			<director>James Gunn</director>

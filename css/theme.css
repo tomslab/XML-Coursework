@@ -1,3 +1,7 @@
+h2, .h2 {
+	font-weight: 300;
+}
+
 nav {
 	background: #354052;
 }
@@ -11,7 +15,8 @@ nav li a {
 }
 
 body {
-	font-family: 'Open Sans';
+	/*font-family: 'Open Sans';*/
+	font-family: 'Lato';
 }
 
 body .light {
@@ -38,11 +43,12 @@ body .light {
 	border-radius: 0;
 	text-transform: uppercase;
 	font-size: 12px;
+	font-weight: 300;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
 	background: #2f3949;
-	  box-shadow: inset 4px 0px 0px 0px #3cdef1;
+	box-shadow: inset 4px 0px 0px 0px #3cdef1;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -53,7 +59,7 @@ body .light {
 	padding-bottom: 4px;
 }
 
-#category-dropdown {
+#category-dropdown, #certificate-dropdown {
 	background: rgb(15, 34, 55);
 }
 
@@ -86,6 +92,10 @@ body .light {
 	color: gray;
 }
 
+.rounded, iframe, object, embed {
+	border-radius: 8px;
+}
+
 .title a {
 	color: #333;
 }
@@ -106,8 +116,41 @@ body .light {
 	content: "";
 }
 
+.writtenList:after {
+	content: ", ";	
+}
+
+.writtenList:nth-last-child(2):after {
+	content: " & ";
+}
+
+.writtenList:last-child:after {
+	content: "";
+}
+
 .container .jumbotron, .container-fluid .jumbotron {
 	border-radius: 0;
 	color: whiteSmoke;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.affix {
+	top: 0;
+}
+
+article h2 {
+	color: #18222b;
+}
+
+article p {
+	font-weight: 300;
+	color: #6d7276;
+}
+
+article h3, article p i {
+	color: #199cfc;
+}
+
+article img {
+	margin-bottom: 20px;
 }

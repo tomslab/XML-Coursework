@@ -22,9 +22,11 @@
         <div class="clearfix" style="margin-bottom: 20px;"></div>
         <div class="col-xs-12">
             <p id="filter">
-                <a id="releaseDate" href="#">Most recent</a> / <a id="rating" href="#">Highest rated</a> / <a id="titles" href="#">Alphabetical</a>
+                Sort by: <a id="filterReleaseDate" href="#">Most recent</a> / <a id="filterRating" href="#">Highest rated</a> / <a id="filterTitles" href="#">Alphabetical</a>
             </p>
         </div>
+        <p>Param: <xsl:value-of select="$sortBy"/></p>
+        <p>Order: <xsl:value-of select="$order"/></p>
         <xsl:for-each select="movies/film">
             <xsl:sort select="*[name()=$sortBy]" order="{$order}"/>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
@@ -40,29 +42,14 @@
                         </strong>
                     </span>
                     <br />
-                    <xsl:for-each select="genres/genre">
+                    <xsl:for-each select="story/genres/genre">
                         <span class="genre"><a href="genre.php?genre={.}"><xsl:value-of select="."/></a></span>
                     </xsl:for-each>
+                    <br />
+                    <span class="genre"><a href="genre.php?genre={.}"><xsl:value-of select="details/releaseDate"/></a></span>
+                    <br />
+                    <span class="genre"><a href="genre.php?genre={.}"><xsl:value-of select="details/rating"/></a></span>
                 </p>
-                <!-- <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><xsl:value-of select="title"/></h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="{media/poster}" class="img-responsive" alt="{title} poster" />
-                        <div class="panelInfo">
-                            <p>Released <xsl:value-of select="releaseDate/day"/>&#160;<xsl:value-of select="releaseDate/month"/>&#160;<xsl:value-of select="releaseDate/year"/></p>
-                            <xsl:choose>
-                                <xsl:when test="runtime/hours!=''">
-                                    <p>Runtime <xsl:value-of select="( runtime/hours * 60 ) + runtime/minutes"/> minutes</p>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <p class="subtle">Unknown runtime</p>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <!-- <p><xsl:value-of select="title"/>, <xsl:value-of select="productionCompany"/></p>
             <img src="{media/poster}" /> -->
