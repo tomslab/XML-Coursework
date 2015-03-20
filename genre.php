@@ -5,7 +5,7 @@
 
 			<?php include('sidebar.php'); ?>
 
-			<main class="col-md-10 col-md-offset-2">
+			<main class="col-xs-12 col-md-10 col-md-offset-2">
 
 				<div class="row">
 

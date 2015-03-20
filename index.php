@@ -5,7 +5,7 @@
 
 		<?php include('sidebar.php'); ?>
 
-		<main class="col-xs-10 col-xs-offset-2 col-md-10 col-md-offset-2">
+		<main class="col-xs-12 col-md-10 col-md-offset-2">
 
 			<div class="row">
 
@@ -41,6 +41,11 @@
 
 				// console.log('run parse');
 				// magicXML.parse();
+
+				$( 'img' ).each( function() {
+					$( this ).attr("src").toLowerCase();
+				});
+
 			});
 
 		function rebindEvents() {

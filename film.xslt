@@ -33,7 +33,7 @@
                     </h1>
                     <p>
                         <xsl:for-each select="story/genres/genre">
-                            <span class="movie-genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
+                            <span class="movie-genre"><a href="genre.php?genre={.}"><xsl:value-of select="."/></a></span>
                         </xsl:for-each>
                     </p>
                     <p class="rating"><xsl:value-of select="rating"/></p>
