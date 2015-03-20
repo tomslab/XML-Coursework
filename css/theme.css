@@ -59,7 +59,7 @@ body .light {
 	padding-bottom: 4px;
 }
 
-#category-dropdown, #certificate-dropdown {
+#category-dropdown, #certificate-dropdown, #rating-dropdown {
 	background: rgb(15, 34, 55);
 }
 
@@ -151,6 +151,14 @@ article h3, article p i {
 	color: #199cfc;
 }
 
-article img {
+.poster, .profile {
 	margin-bottom: 20px;
+}
+
+.label-film {
+	background: #199cfc;
+}
+
+.movieList h2 {
+	margin-top: 0;
 }

@@ -24,6 +24,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="m-xml.js"></script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script>
 		$('document').ready(function() {
@@ -33,6 +34,7 @@
 			window.console.log(id);
 
 			updateSidebar();
+			clickSidebar();
 
 			// var artistValue = $( '#artistChoice' ).val();
 			// window.console.log(artistValue);
@@ -40,32 +42,50 @@
 			// console.log('run parse');
 			// magicXML.parse();
 
-			var filmRating = $('#ratingCalc').text();
-			if( filmRating != NaN ) {
-				var filmRating = parseFloat(filmRating);
-				var filmRating = Math.round( filmRating );
-				if( filmRating > 5 ) {
-					filmRating = 5;
-				}
-				window.console.log( filmRating );
-				var filmRatingBuilder = '';
-				for( var i = 0; i < filmRating; i++ ) {
-					var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
-				}
-				if( filmRating != 5 ) {
-					var filmRatingRemaining = 5 - filmRating;
-					for( var i = 0; i < filmRatingRemaining; i++ ) {
-						var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
+			$( ".rating" ).each(function( index ) {
+					var filmRating = $( this ).text();
+					if( filmRating != '' ) {
+						var filmRating = parseFloat( filmRating );
+						var filmRating = Math.round( filmRating );
+						var filmRating = filmRating / 2;
+						if( filmRating > 5 ) {
+							filmRating = 5;
+						}
+						var decimalCheck = filmRating.toString();
+						var decimalCheck = decimalCheck.indexOf(".");
+						if( decimalCheck > -1 ) {
+							var fullStars = Math.floor( filmRating );
+							var filmRatingBuilder = '';
+							for( var i = 0; i < fullStars; i++ ) {
+								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
+							}
+							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-half-o"></i>';
+							if( filmRating != 5 ) {
+								var filmRatingRemaining = 4 - filmRating;
+								for( var i = 0; i < filmRatingRemaining; i++ ) {
+									var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
+								}
+							}
+						} else {
+							var filmRatingBuilder = '';
+							for( var i = 0; i < filmRating; i++ ) {
+								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
+							}
+							if( filmRating != 5 ) {
+								var filmRatingRemaining = 5 - filmRating;
+								for( var i = 0; i < filmRatingRemaining; i++ ) {
+									var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
+								}
+							}
+						}
+						$( this ).html( filmRatingBuilder );
+					} else {
+						var filmRatingBuilder = '';
+						for( var i = 0; i < 5; i++ ) {
+							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o" style="color: #999;"></i>';
+						}
+						$( this ).html( filmRatingBuilder );
 					}
-				}
-					// <i class="fa fa-star"></i>
-					$( '#ratingContainer' ).html( filmRatingBuilder );
-				} else {
-					$( '#ratingContainer' ).html( "Not rated" );
-				}
-
-				$( '#category' ).click( function() {
-					$( '#category-dropdown' ).slideToggle( 1000, "easeOutExpo" );
 				});
 
 
@@ -111,7 +131,7 @@ function getQueryVariable(variable) {
 
 function updateSidebar() {
 	$( 'nav' ).html('<div id="nav-inner"></div>');
-	magicXML.transformAndReplace("#nav-inner", "movies.xml", "genres.xslt");
+	magicXML.transformAndReplace("#nav-inner", "movies.xml", "sidebar.xslt");
 };
 
 function updateList(value) {

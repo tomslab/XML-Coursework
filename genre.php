@@ -54,7 +54,7 @@
 
 			function updateList(value) {
 				$( '#content' ).html('<div id="content-inner"></div>');
-				magicXML.transformAndReplace("#content-inner", "movies.xml", "search.xslt", [{ "name" : "genre", "value": value }]);
+				magicXML.transformAndReplace("#content-inner", "movies.xml", "genre.xslt", [{ "name" : "genre", "value": value }]);
 			};
 		</script>
 	</footer>

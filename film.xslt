@@ -22,7 +22,7 @@
                     <li><a href="/">Home</a></li>
                     <li class="active"><xsl:value-of select="titles/title"/>&#160;<xsl:value-of select="titles/subtitle"/></li>
                 </ol>
-                <div class="jumbotron" style="background-image: url('{media/hero}'); background-size: cover; background-position: center 30%;">
+                <div class="jumbotron" style="background-image: url('img/movie_assets/{titles/title}_{titles/subtitle}/{media/hero}'); background-size: cover; background-position: center 30%;">
                     <h1>
                         <xsl:value-of select="titles/title"/>
                         <xsl:choose>
@@ -36,8 +36,7 @@
                             <span class="movie-genre"><a href="genre.html?genre={.}"><xsl:value-of select="."/></a></span>
                         </xsl:for-each>
                     </p>
-                    <p id="ratingCalc" style="display: none;"><xsl:value-of select="( rating div 2 )"/></p>
-                    <p id="ratingContainer"></p>
+                    <p class="rating"><xsl:value-of select="rating"/></p>
                     <p>Certificate<br /><xsl:value-of select="details/certificate"/></p>
                     <p>Director<br /><xsl:value-of select="crew/director"/></p>
                 </div>
@@ -47,7 +46,7 @@
                     <div class="col-md-3">
                         <div id="movieLeft">
                             <h2><i class="fa fa-film"></i>&#160;Information</h2>
-                            <img src="{media/poster}" class="img-responsive rounded" alt="{title} poster" />
+                            <img src="img/movie_assets/{titles/title}_{titles/subtitle}/{media/poster}" class="img-responsive rounded poster" alt="{title} poster" />
                             <div class="row">
                                 <div class="col-xs-2">
                                     <p><i class="fa fa-clock-o"></i></p>

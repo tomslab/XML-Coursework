@@ -56,8 +56,8 @@
 			</boxOffice>
 		</details>
 		<media>
-			<poster>avengers_age_of_ultron_poster.jpg</poster>
-			<hero>avengers_age_of_ultron_hero.jpg</hero>
+			<poster>img/avengers_age_of_ultron_poster.jpg</poster>
+			<hero>img/avengers_age_of_ultron_hero.jpg</hero>
 			<gallery>
 				<photo></photo>
 			</gallery>
@@ -127,8 +127,8 @@
 			</boxOffice>
 		</details>
 		<media>
-			<poster>avengers_assemble_poster.jpg</poster>
-			<hero>avengers_assemble_hero.jpg</hero>
+			<poster>img/avengers_assemble_poster.jpg</poster>
+			<hero>img/avengers_assemble_hero.jpg</hero>
 			<gallery>
 				<photo></photo>
 				<photo></photo>
@@ -241,8 +241,8 @@
 			</boxOffice>
 		</details>
 		<media>
-			<poster>inside_out_poster.jpg</poster>
-			<hero>inside_out_hero.jpg</hero>
+			<poster>img/inside_out_poster.jpg</poster>
+			<hero>img/inside_out_hero.jpg</hero>
 			<gallery>
 				<photo></photo>
 			</gallery>
@@ -325,8 +325,8 @@
 			</boxOffice>
 		</details>
 		<media>
-			<poster>guardians_of_the_galaxy_poster.jpg</poster>
-			<hero>guardians_of_the_galaxy_hero.jpg</hero>
+			<poster>img/guardians_of_the_galaxy_poster.jpg</poster>
+			<hero>img/guardians_of_the_galaxy_hero.jpg</hero>
 			<gallery>
 				<photo></photo>
 			</gallery>
@@ -406,8 +406,8 @@
 			</boxOffice>
 		</details>
 		<media>
-			<poster>iron_man_poster.jpg</poster>
-			<hero>iron_man_hero.jpg</hero>
+			<poster>img/iron_man_poster.jpg</poster>
+			<hero>img/iron_man_hero.jpg</hero>
 			<gallery>
 				<photo></photo>
 			</gallery>
@@ -443,95 +443,6 @@
 			<character>
 				<actor>Leslie Bibb</actor>
 				<name>Christine Everhart</name>
-			</character>
-		</cast>
-	</film>
-	<film id="7">
-		<titles>
-			<title>Iron Man 2</title>
-		</titles>
-		<releaseDate>
-			<year>2010</year>
-			<month>May</month>
-			<day>7</day>
-		</releaseDate>
-		<rating>7.1</rating>
-		<story>
-			<plot>With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.</plot>
-			<genres>
-				<genre>&act;</genre>
-				<genre>&adv;</genre>
-				<genre>&sci;</genre>
-			</genres>
-		</story>
-		<details>
-			<runtime>
-				<hours>2</hours>
-				<minutes>4</minutes>
-			</runtime>
-			<certificate>PG-13</certificate>
-			<companyCredits>
-				<productionCompany>&para;</productionCompany>
-				<productionCompany>&mvs;</productionCompany>
-			</companyCredits>
-			<languages>
-				<language>&en;</language>
-				<language>French</language>
-				<langauge>Russian</langauge>
-			</languages>
-			<boxOffice>
-				<budget estimated="true">200000000</budget>
-				<openingWeekend country="USA">128122480</openingWeekend>
-				<gross county="USA" date="13 August 2010">312057433</gross>
-			</boxOffice>
-		</details>
-		<media>
-			<poster>iron_man_2_poster.jpg</poster>
-			<hero>iron_man_2_hero.jpg</hero>
-			<gallery>
-				<photo></photo>
-			</gallery>
-			<trailer service="youtube">FNQowwwwYa0</trailer>
-			<soundtrack service="spotify">6bnGdcfwPDRSkj6H8GcbAh</soundtrack>
-		</media>
-		<crew>
-			<director>Jon Favreau</director>
-			<writers>
-				<writer>Justin Theroux</writer>
-				<writer>Stan Lee</writer>
-				<writer>Don Heck</writer>
-				<writer>Larry Lieber</writer>
-				<writer>Jack Kirby</writer>
-			</writers>
-		</crew>
-		<cast>
-			<character>
-				<actor>Robert Downey Jr.</actor>
-				<name>Tony Stark</name>
-			</character>
-			<character>
-				<actor>Gwyneth Paltrow</actor>
-				<name>Pepper Potts</name>
-			</character>
-			<character>
-				<actor>Don Cheadle</actor>
-				<name>Lt. Col. James 'Rhodey' Rhodes</name>
-			</character>
-			<character>
-				<actor>Scarlett Johansson</actor>
-				<name>Natalie Rushman / Natasha Romanoff</name>
-			</character>
-			<character>
-				<actor>Sam Rockwell</actor>
-				<name>Justin Hammer</name>
-			</character>
-			<character>
-				<actor>Mickey Rourke</actor>
-				<name>Ivan Vanko</name>
-			</character>
-			<character>
-				<actor>Samuel L. Jackson</actor>
-				<name>Nick Fury</name>
 			</character>
 		</cast>
 	</film>

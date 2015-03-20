@@ -44,9 +44,11 @@
             <ul class="nav nav-pills nav-stacked" id="category-dropdown" style="display:none;">
                 <xsl:for-each select="movies/film/story/genres/genre[not(.=preceding::*)]">
                     <xsl:sort select="."/>
-                    <li role="presentation"><a href="genre.php?genre={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
-                        <xsl:value-of select="."/>
-                    </div></div></a></li>
+                    <xsl:if test=".!=''">
+                        <li role="presentation"><a href="genre.php?genre={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
+                            <xsl:value-of select="."/>
+                        </div></div></a></li>
+                    </xsl:if>
                 </xsl:for-each>
             </ul>
             <li role="presentation" class="dropdown" id="certificate">
@@ -67,9 +69,11 @@
             <ul class="nav nav-pills nav-stacked" id="certificate-dropdown" style="display:none;">
                 <xsl:for-each select="movies/film/details/certificate[not(.=preceding::*)]">
                     <xsl:sort select="."/>
-                    <li role="presentation"><a href="certificate.php?cert={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
-                        <xsl:value-of select="."/>
-                    </div></div></a></li>
+                    <xsl:if test=".!=''">
+                        <li role="presentation"><a href="certificate.php?cert={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
+                            <xsl:value-of select="."/>
+                        </div></div></a></li>
+                    </xsl:if>
                 </xsl:for-each>
             </ul>
             <li role="presentation" class="dropdown" id="rating">
@@ -88,11 +92,13 @@
                 </a>
             </li>
             <ul class="nav nav-pills nav-stacked" id="rating-dropdown" style="display:none;">
-                <xsl:for-each select="movies/film/details/rating[not(.=preceding::*)]">
+                <xsl:for-each select="movies/film/rating[not(.=preceding::*)]">
                     <xsl:sort select="."/>
-                    <li role="presentation"><a href="rating.php?rating={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
-                        <xsl:value-of select="."/>
-                    </div></div></a></li>
+                    <xsl:if test=".!=''">
+                        <li role="presentation"><a href="rating.php?rating={.}"><div class="row"><div class="col-md-10 col-md-offset-2">
+                            <xsl:value-of select="."/>
+                        </div></div></a></li>
+                    </xsl:if>
                 </xsl:for-each>
             </ul>
             <li role="presentation"><a href="#"><div class="row">

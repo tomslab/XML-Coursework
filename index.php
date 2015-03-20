@@ -25,14 +25,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="m-xml.js"></script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
 	<script>
 		$('document').ready(function() {
-				// var artistValue = $( '#artistChoice' ).val();
-				// window.console.log(artistValue);
 
 				updateSidebar();
+				clickSidebar();
 
-				updateList('details/releaseDate', 'descending');
+				updateList('releaseDate', 'descending');
 				$( '#filterReleaseDate' ).css('color','#333');
 				$( '#filterReleaseDate' ).css('font-weight','700');
 				window.console.log('foo');
@@ -41,21 +41,6 @@
 
 				// console.log('run parse');
 				// magicXML.parse();
-				$( '#category' ).click( function() {
-					$( '#category-dropdown' ).slideToggle( 1000, "easeOutExpo" );
-					$( '#certificate-dropdown' ).slideUp( 1000, "easeOutExpo" );
-					$( '#rating-dropdown' ).slideUp( 1000, "easeOutExpo" );
-				});
-				$( '#certificate' ).click( function() {
-					$( '#certificate-dropdown' ).slideToggle( 1000, "easeOutExpo" );
-					$( '#category-dropdown' ).slideUp( 1000, "easeOutExpo" );
-					$( '#rating-dropdown' ).slideUp( 1000, "easeOutExpo" );
-				});
-				$( '#rating' ).click( function() {
-					$( '#rating-dropdown' ).slideToggle( 1000, "easeOutExpo" );
-					$( '#certificate-dropdown' ).slideUp( 1000, "easeOutExpo" );
-					$( '#category-dropdown' ).slideUp( 1000, "easeOutExpo" );
-				});
 			});
 
 		function rebindEvents() {
@@ -68,12 +53,12 @@
 						$( '#filterTitles' ).css('font-weight','700');
 						break;
 					case "Highest rated":
-						updateList('details/rating', 'descending');
+						updateList('rating', 'descending');
 						$( '#filterRating' ).css('color','#333');
 						$( '#filterRating' ).css('font-weight','700');
 						break;
 					case "Most recent":
-						updateList('details/releaseDate', 'descending');
+						updateList('releaseDate', 'descending');
 						$( '#filterReleaseDate' ).css('color','#333');
 						$( '#filterReleaseDate' ).css('font-weight','700');
 						break;
@@ -85,7 +70,7 @@
 
 		function updateSidebar() {
 			$( 'nav' ).html('<div id="nav-inner"></div>');
-			magicXML.transformAndReplace("#nav-inner", "movies.xml", "genres.xslt");
+			magicXML.transformAndReplace("#nav-inner", "movies.xml", "sidebar.xslt");
 		};
 
 		function updateList(sort, order) {
