@@ -100,6 +100,8 @@
 		<rating>8.2</rating>
 		<story>
 			<plot>Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</plot>
+			<storyline>Marvel Studios presents Marvel's The Avengers-the Super Hero team up of a lifetime, featuring iconic Marvel Super Heroes Iron Man, The Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When an unexpected enemy emerges that threatens global safety and security, Nick Fury, Director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins.
+			</storyline>
 			<genres>
 				<genre>&act;</genre>
 				<genre>&adv;</genre>
@@ -203,6 +205,11 @@
 				<name>The Other</name>
 			</character>
 		</cast>
+		<reviews>
+			<review author="Kenneth Turan" organisation="Los Angeles Times">Whedon is the key reason why this $220-million behemoth of a movie is smartly thought out and executed with verve and precision. It may be overly long at two hours, 23 minutes, but so much is going on you might not even notice.</review>
+			<review author="Peter Travers" organisation="Rolling Stone">All hail Joss Whedon, the warrior king of this dizzying, dazzling 3D action epic. The Avengers is Transformers with a brain, a heart and a working sense of humor.</review>
+			<review author="Ian Bunting" organisation="Daily Record">Is Avengers Assemble the best comic book film ever? That's a tough call but it's certainly the most exciting, and a true epic moment in cinematic history.</review>
+		</reviews>
 	</film>
 	<film id="3">
 		<titles>

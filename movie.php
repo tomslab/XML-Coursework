@@ -41,6 +41,7 @@
 			updateList(id);
 			// console.log('run parse');
 			// magicXML.parse();
+			updateCast(id);
 
 			$( ".rating" ).each(function( index ) {
 					var filmRating = $( this ).text();
@@ -87,36 +88,6 @@
 						$( this ).html( filmRatingBuilder );
 					}
 				});
-
-
-				var affixDist = $( '#movieLeft' ).offset().top - 20;
-				$('#movieLeft').affix({
-					offset: {
-						top: affixDist
-					}
-				});
-
-				$( window ).scroll( function() {
-					var affixWidth = $( '#movieLeft' ).parent('div').width();
-					// window.console.log(affixWidth);
-					$( '#movieLeft' ).css( 'max-width', affixWidth );
-				});
-
-				// var affixDist = $( '#movieLeft' ).offset().top;
-				// window.console.log(affixDist);
-				// $( window ).scroll( function() {
-				// 	var scrollTop = $(window).scrollTop();
-				// 	//window.console.log(scrollTop);
-				// 	if( affixDist <= scrollTop ) {
-				// 		//window.console.log(affixWidth);
-				// 		$( '#movieLeft' ).addClass( 'affix-top' );
-				// 		$( '#movieRight' ).addClass( 'col-md-offset-3' );
-				// 	} else {
-				// 		$( '#movieLeft' ).removeClass( 'affix-top' );
-				// 		$( '#movieRight' ).removeClass( 'col-md-offset-3' );
-				// 	}
-				// })
-
 });
 
 function getQueryVariable(variable) {
@@ -137,6 +108,16 @@ function updateSidebar() {
 function updateList(value) {
 	$( '#content' ).html('<div id="content-inner"></div>');
 	magicXML.transformAndReplace("#content-inner", "movies.xml", "film.xslt", [{ "name" : "id", "value": value }]);
+};
+
+function updateCast(value) {
+	$( '#cast' ).html('<div id="cast-inner"></div>');
+	magicXML.transformAndReplace("#cast-inner", "talent.xml", "cast.xslt", [{ "name" : "id", "value": value }]);
+}
+
+function watchTrailer() {
+	//window.console.log('qwerty');
+	$( '#trailer' ).slideToggle(1000);
 };
 </script>
 </footer>

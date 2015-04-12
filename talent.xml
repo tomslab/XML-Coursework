@@ -1,4 +1,11 @@
 <?xml version="1.0"?>
+<!DOCTYPE talent
+[
+<!ENTITY tStark "Tony Stark / Iron Man">
+<!ENTITY bWidow "Natasha Romanoff / Black Widow">
+<!ENTITY cap "Steve Rogers / Captain America">
+<!ENTITY hulk "Bruce Banner / The Hulk">
+]>
 <talent>
 	<person>
 		<names>
@@ -8,6 +15,22 @@
 		<profilePicture>robert_downey_jr.jpg</profilePicture>
 		<bio>Robert Downey Jr. has evolved into one of the most respected actors in Hollywood. With an amazing list of credits to his name, he has managed to stay new and fresh even after over four decades in the business.</bio>
 		<twitter widget="578730459053555713">RobertDowneyJr</twitter>
+		<appearances>
+			<character film="2">&tStark;</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Chris</firstName>
+			<lastName>Hemsworth</lastName>
+		</names>
+		<profilePicture>chris_hemsworth.jpg</profilePicture>
+		<bio></bio>
+		<twitter></twitter>
+		<appearances>
+			<character film="2">Thor</character>
+			<!-- <character film=""></character> -->
+		</appearances>
 	</person>
 	<person>
 		<names>
@@ -17,6 +40,10 @@
 		<profilePicture>scarlett_johansson.jpg</profilePicture>
 		<bio>Scarlett Johansson was born in New York City. Her mother, Melanie Sloan, is from an Ashkenazi Jewish family, and her father, Karsten Johansson, is Danish. Scarlett showed a passion for acting at a young age and starred in many plays.</bio>
 		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&bWidow;</character>
+			<!-- <character film=""></character> -->
+		</appearances>
 	</person>
 	<person>
 		<names>
@@ -26,5 +53,35 @@
 		<profilePicture>samuel_l_jackson.jpg</profilePicture>
 		<bio>Samuel L. Jackson was born in Washington, D.C., to Elizabeth (Montgomery) and Roy Henry Jackson. He was raised by his mother, a factory worker.</bio>
 		<twitter widget="578731635035746304">SamuelLJackson</twitter>
+		<appearances>
+			<character film="2">&bWidow;</character>
+			<!-- <character film=""></character> -->
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Chris</firstName>
+			<lastName>Evans</lastName>
+		</names>
+		<profilePicture>chris_evans.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&cap;</character>
+			<!-- <character film=""></character> -->
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Mark</firstName>
+			<lastName>Ruffalo</lastName>
+		</names>
+		<profilePicture>mark_ruffalo.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&hulk;</character>
+			<!-- <character film=""></character> -->
+		</appearances>
 	</person>
 </talent>

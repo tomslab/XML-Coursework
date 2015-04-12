@@ -83,16 +83,25 @@ body .light {
 	font-size: 16px;
 }
 
+.jumbotron img {
+	margin-top: 20px;
+}
+
 .subtle {
 	color: #CCC;
-	font-style: italic;
+}
+
+h3 .subtle {
+	font-style: initial;
+	font-weight: 300;
+	font-size: 16px;
 }
 
 #filter, #filter a {
 	color: gray;
 }
 
-.rounded, iframe, object, embed {
+.rounded/*, iframe, object, embed*/ {
 	border-radius: 8px;
 }
 
@@ -138,6 +147,14 @@ body .light {
 	top: 0;
 }
 
+.jumbotron {
+	margin-bottom: 0;
+}
+
+article {
+	margin-top: 30px;
+}
+
 article h2 {
 	color: #18222b;
 }
@@ -147,7 +164,7 @@ article p {
 	color: #6d7276;
 }
 
-article h3, article p i {
+article h3, article p i, .blue {
 	color: #199cfc;
 }
 
@@ -161,4 +178,18 @@ article h3, article p i {
 
 .movieList h2 {
 	margin-top: 0;
+}
+
+.circle {
+	width: 100%;
+	padding-bottom: 100%;
+	border-radius: 50%;
+}
+
+#trailer {
+	display: none;
+}
+
+.clickable {
+	cursor: pointer;
 }

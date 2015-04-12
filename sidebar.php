@@ -1,4 +1,4 @@
-<nav class="col-md-2 sidebar hidden-xs">
+<nav class="col-sm-3 col-md-2 sidebar hidden-xs">
 	<h1>sixteen<br /><span style="color:#4876AB;">by</span>nine</h1>
 	<ul class="nav main-nav nav-pills nav-stacked">
 		<li role="presentation" class="active">
