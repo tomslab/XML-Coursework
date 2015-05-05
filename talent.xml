@@ -5,6 +5,9 @@
 <!ENTITY bWidow "Natasha Romanoff / Black Widow">
 <!ENTITY cap "Steve Rogers / Captain America">
 <!ENTITY hulk "Bruce Banner / The Hulk">
+<!ENTITY hwke "Clint Barton / Hawkeye">
+<!ENTITY apc "Agent Phil Coulson">
+<!ENTITY amh "Agent Maria Hill">
 ]>
 <talent>
 	<person>
@@ -82,6 +85,91 @@
 		<appearances>
 			<character film="2">&hulk;</character>
 			<!-- <character film=""></character> -->
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Jeremy</firstName>
+			<lastName>Renner</lastName>
+		</names>
+		<profilePicture>jeremy_renner.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&hwke;</character>
+			<!-- <character film=""></character> -->
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Tom</firstName>
+			<lastName>Hiddleston</lastName>
+		</names>
+		<profilePicture>tom_hiddleston.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">Loki</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Clark</firstName>
+			<lastName>Gregg</lastName>
+		</names>
+		<profilePicture>clark_gregg.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&apc;</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Cobie</firstName>
+			<lastName>Smulders</lastName>
+		</names>
+		<profilePicture>cobie_smulders.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&amh;</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Gwyneth</firstName>
+			<lastName>Paltrow</lastName>
+		</names>
+		<profilePicture>gwyenth_paltrow.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">&amh;</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Stellan</firstName>
+			<lastName>Skarsg&#229;rd</lastName>
+		</names>
+		<profilePicture>stellan_skarsgard.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">Selvig</character>
+		</appearances>
+	</person>
+	<person>
+		<names>
+			<firstName>Paul</firstName>
+			<lastName>Bettany</lastName>
+		</names>
+		<profilePicture>paul_bettany.jpg</profilePicture>
+		<bio></bio>
+		<twitter widget=""></twitter>
+		<appearances>
+			<character film="2">JARVIS (Voice)</character>
 		</appearances>
 	</person>
 </talent>

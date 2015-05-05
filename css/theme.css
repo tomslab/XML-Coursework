@@ -148,11 +148,15 @@ h3 .subtle {
 }
 
 .jumbotron {
-	margin-bottom: 0;
+	background: rgba(0,0,0,0.3);
+	-webkit-transition: 1s; /* Safari and Chrome */
+	transition: 1s;
+	-webkit-transition-timing-function: ease-in-out; /* Safari and Chrome */
+    transition-timing-function: ease-in-out;
 }
 
-article {
-	margin-top: 30px;
+.faded {
+	background: rgba(0,0,0,0.6);
 }
 
 article h2 {
@@ -164,7 +168,7 @@ article p {
 	color: #6d7276;
 }
 
-article h3, article p i, .blue {
+article h3, article p i, .blue, .slick-dots li.slick-active button:before {
 	color: #199cfc;
 }
 
@@ -186,10 +190,44 @@ article h3, article p i, .blue {
 	border-radius: 50%;
 }
 
-#trailer {
+#trailer, #soundtrack, #soundtrack-mobile {
 	display: none;
 }
 
 .clickable {
 	cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+
+	.slick-slide:nth-child(odd) div {
+		margin-right: 15px;
+	}
+
+	.slick-slide:nth-child(even) div {
+		margin-left: 15px;
+	}
+
+}
+
+.media-box {
+	background-size: cover !important;
+	display: block;
+	min-height: 330px;
+}
+
+.slick-dots li button:before {
+	font-size: 20px;
+}
+
+h5 {
+	margin-top: 0;
+}
+
+#soundtrack, #soundtrackMobile {
+	margin-bottom: 20px;
+}
+
+#additionalCast {
+	display: none;
 }

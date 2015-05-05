@@ -15,6 +15,11 @@
             <li class="active">Home</li>
         </ol>
         <div class="clearfix" style="margin-bottom: 20px;"></div>
+        <!-- <form class="col-xs-12">
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" placeholder="Search" />
+            </div>
+        </form> -->
         <div class="col-xs-12">
             <p id="filter">
                 Sort by: <a id="filterReleaseDate" href="#">Most recent</a> / <a id="filterRating" href="#">Highest rated</a> / <a id="filterTitles" href="#">Alphabetical</a>

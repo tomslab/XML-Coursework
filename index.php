@@ -29,15 +29,14 @@
 	<script>
 		$('document').ready(function() {
 
-				updateSidebar();
-				clickSidebar();
+			updateSidebar();
+			clickSidebar();
 
-				updateList('releaseDate', 'descending');
-				$( '#filterReleaseDate' ).css('color','#333');
-				$( '#filterReleaseDate' ).css('font-weight','700');
-				window.console.log('foo');
+			updateList('releaseDate', 'descending');
+			$( '#filterReleaseDate' ).css('color','#333');
+			$( '#filterReleaseDate' ).css('font-weight','700');
 
-				rebindEvents();
+			rebindEvents();
 
 				// console.log('run parse');
 				// magicXML.parse();
@@ -53,22 +52,22 @@
 				var elementVal = $( this ).text();
 				switch( elementVal ) {
 					case "Alphabetical":
-						updateList('titles', 'ascending');
-						$( '#filterTitles' ).css('color','#333');
-						$( '#filterTitles' ).css('font-weight','700');
-						break;
+					updateList('titles', 'ascending');
+					$( '#filterTitles' ).css('color','#333');
+					$( '#filterTitles' ).css('font-weight','700');
+					break;
 					case "Highest rated":
-						updateList('rating', 'descending');
-						$( '#filterRating' ).css('color','#333');
-						$( '#filterRating' ).css('font-weight','700');
-						break;
+					updateList('rating', 'descending');
+					$( '#filterRating' ).css('color','#333');
+					$( '#filterRating' ).css('font-weight','700');
+					break;
 					case "Most recent":
-						updateList('releaseDate', 'descending');
-						$( '#filterReleaseDate' ).css('color','#333');
-						$( '#filterReleaseDate' ).css('font-weight','700');
-						break;
+					updateList('releaseDate', 'descending');
+					$( '#filterReleaseDate' ).css('color','#333');
+					$( '#filterReleaseDate' ).css('font-weight','700');
+					break;
 					default:
-						window.console.log('default');
+					window.console.log('default');
 				}
 			});
 		}

@@ -27,9 +27,10 @@
 			<month>May</month>
 			<day>1</day>
 		</releaseDate>
-		<rating></rating>
+		<rating>8.2</rating>
 		<story>
 			<plot>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans.</plot>
+			<storyline>When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth's Mightiest Heroes, including Iron Man, Captain America, Thor, the Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for a global adventure.</storyline>
 			<genres>
 				<genre>&act;</genre>
 				<genre>&adv;</genre>
@@ -42,17 +43,17 @@
 				<hours>2</hours>
 				<minutes>30</minutes>
 			</runtime>
-			<certificate></certificate>
+			<certificate>12A</certificate>
 			<companyCredits>
 				<productionCompany>&mvs;</productionCompany>
 			</companyCredits>
 			<languages>
-				<language></language>
+				<language>English</language>
 			</languages>
-			<boxOffice>
-				<budget estimated=""></budget>
-				<openingWeekend country=""></openingWeekend>
-				<gross county="" date=""></gross>
+			<boxOffice currency="$">
+				<budget estimated="true">250,000,000</budget>
+				<openingWeekend country="USA">191,271,109</openingWeekend>
+				<gross county="USA" date="1 May 2015">191,271,109</gross>
 			</boxOffice>
 		</details>
 		<media>
@@ -62,7 +63,7 @@
 				<photo></photo>
 			</gallery>
 			<trailer service="youtube">PqkR0SwFN_4</trailer>
-			<soundtrack service=""></soundtrack>
+			<soundtrack service="spotify">1UaUCko4qqWnT2gJKmaQLT</soundtrack>
 		</media>
 		<crew>
 			<director>Joss Whedon</director>
@@ -72,20 +73,6 @@
 				<writer>Jack Kirby</writer>
 			</writers>
 		</crew>
-		<cast>
-			<character>
-				<actor>Scarlett Johansson</actor>
-				<name>Natasha Romanoff / Black Widow</name>
-			</character>
-			<character>
-				<actor>Hayley Atwell</actor>
-				<name>Peggy Carter</name>
-			</character>
-			<character>
-				<actor>Aaron Taylor-Johnson</actor>
-				<name>Pietro Maximoff / Quicksilver</name>
-			</character>
-		</cast>
 	</film>
 	<film id="2">
 		<titles>
@@ -122,10 +109,10 @@
 				<language>English</language>
 				<language>Russian</language>
 			</languages>
-			<boxOffice>
-				<budget estimated="true">220000000</budget>
-				<openingWeekend country="USA">207438708</openingWeekend>
-				<gross county="USA" date="28 September 2012">623279547</gross>
+			<boxOffice currency="$">
+				<budget estimated="true">220,000,000</budget>
+				<openingWeekend country="USA">207,438,708</openingWeekend>
+				<gross country="USA" date="28 September 2012">623,279,547</gross>
 			</boxOffice>
 		</details>
 		<media>
@@ -147,7 +134,7 @@
 				<writer>Zak Penn</writer>
 			</writers>
 		</crew>
-		<cast>
+		<!-- <cast>
 			<character>
 				<actor>Robert Downey Jr.</actor>
 				<name>Tony Stark / Iron Man</name>
@@ -204,12 +191,16 @@
 				<actor>Alexis Denisof</actor>
 				<name>The Other</name>
 			</character>
-		</cast>
+		</cast> -->
 		<reviews>
 			<review author="Kenneth Turan" organisation="Los Angeles Times">Whedon is the key reason why this $220-million behemoth of a movie is smartly thought out and executed with verve and precision. It may be overly long at two hours, 23 minutes, but so much is going on you might not even notice.</review>
 			<review author="Peter Travers" organisation="Rolling Stone">All hail Joss Whedon, the warrior king of this dizzying, dazzling 3D action epic. The Avengers is Transformers with a brain, a heart and a working sense of humor.</review>
 			<review author="Ian Bunting" organisation="Daily Record">Is Avengers Assemble the best comic book film ever? That's a tough call but it's certainly the most exciting, and a true epic moment in cinematic history.</review>
 		</reviews>
+		<awards>
+			<award organisation="Academy Awards" nomination="Best Achievement in Visual Effects" win="false" />
+			<award organisation="BAFTA" nomination="Best Visual Effects" win="false" />
+		</awards>
 	</film>
 	<film id="3">
 		<titles>

@@ -26,6 +26,7 @@
 	<script type="text/javascript" src="m-xml.js"></script>
 	<script type="text/javascript" src="js/sidebar.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
 	<script>
 		$('document').ready(function() {
 
@@ -43,51 +44,56 @@
 			// magicXML.parse();
 			updateCast(id);
 
+			slider();
+
+			castOrganiser();
+
 			$( ".rating" ).each(function( index ) {
-					var filmRating = $( this ).text();
-					if( filmRating != '' ) {
-						var filmRating = parseFloat( filmRating );
-						var filmRating = Math.round( filmRating );
-						var filmRating = filmRating / 2;
-						if( filmRating > 5 ) {
-							filmRating = 5;
+				var filmRating = $( this ).text();
+				if( filmRating != '' ) {
+					var filmRating = parseFloat( filmRating );
+					var filmRating = Math.round( filmRating );
+					var filmRating = filmRating / 2;
+					if( filmRating > 5 ) {
+						filmRating = 5;
+					}
+					var decimalCheck = filmRating.toString();
+					var decimalCheck = decimalCheck.indexOf(".");
+					if( decimalCheck > -1 ) {
+						var fullStars = Math.floor( filmRating );
+						var filmRatingBuilder = '';
+						for( var i = 0; i < fullStars; i++ ) {
+							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
 						}
-						var decimalCheck = filmRating.toString();
-						var decimalCheck = decimalCheck.indexOf(".");
-						if( decimalCheck > -1 ) {
-							var fullStars = Math.floor( filmRating );
-							var filmRatingBuilder = '';
-							for( var i = 0; i < fullStars; i++ ) {
-								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
-							}
-							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-half-o"></i>';
-							if( filmRating != 5 ) {
-								var filmRatingRemaining = 4 - filmRating;
-								for( var i = 0; i < filmRatingRemaining; i++ ) {
-									var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
-								}
-							}
-						} else {
-							var filmRatingBuilder = '';
-							for( var i = 0; i < filmRating; i++ ) {
-								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
-							}
-							if( filmRating != 5 ) {
-								var filmRatingRemaining = 5 - filmRating;
-								for( var i = 0; i < filmRatingRemaining; i++ ) {
-									var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
-								}
+						var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-half-o"></i>';
+						if( filmRating != 5 ) {
+							var filmRatingRemaining = 4 - filmRating;
+							for( var i = 0; i < filmRatingRemaining; i++ ) {
+								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
 							}
 						}
-						$( this ).html( filmRatingBuilder );
 					} else {
 						var filmRatingBuilder = '';
-						for( var i = 0; i < 5; i++ ) {
-							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o" style="color: #999;"></i>';
+						for( var i = 0; i < filmRating; i++ ) {
+							var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star"></i>';
 						}
-						$( this ).html( filmRatingBuilder );
+						if( filmRating != 5 ) {
+							var filmRatingRemaining = 5 - filmRating;
+							for( var i = 0; i < filmRatingRemaining; i++ ) {
+								var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o"></i>';
+							}
+						}
 					}
-				});
+					$( this ).html( filmRatingBuilder );
+				} else {
+					var filmRatingBuilder = '';
+					for( var i = 0; i < 5; i++ ) {
+						var filmRatingBuilder = filmRatingBuilder + ' <i class="fa fa-star-o" style="color: #999;"></i>';
+					}
+					$( this ).html( filmRatingBuilder );
+				}
+			});
+
 });
 
 function getQueryVariable(variable) {
@@ -117,8 +123,87 @@ function updateCast(value) {
 
 function watchTrailer() {
 	//window.console.log('qwerty');
-	$( '#trailer' ).slideToggle(1000);
+	$( '#trailer' ).slideToggle(1000, 'swing');
+	if( $( '#trailer-button' ).text() == 'Watch trailer' ) {
+		$( '#trailer-button' ).text( 'Close trailer' ).removeClass( 'btn-primary' ).addClass( 'btn-danger' );
+		$( '#trailer-mobile-button' ).text( 'Close trailer' ).removeClass( 'btn-primary' ).addClass( 'btn-danger' );
+	} else {
+		$( '#trailer-button' ).text( 'Watch trailer' ).removeClass( 'btn-danger' ).addClass( 'btn-primary' );
+		$( '#trailer-mobile-button' ).text( 'Watch trailer' ).removeClass( 'btn-danger' ).addClass( 'btn-primary' );
+	}
+	$( '.jumbotron' ).toggleClass( 'faded' );
 };
+
+function playSoundtrack() {
+	//window.console.log('qwerty');
+	$( '#soundtrack' ).slideToggle(1000, 'swing');
+	if( $( '#soundtrack-button' ).text() == 'Play soundtrack' ) {
+		$( '#soundtrack-button' ).text( 'Close soundtrack' ).removeClass( 'btn-info' ).addClass( 'btn-danger' );
+	} else {
+		$( '#soundtrack-button' ).text( 'Play soundtrack' ).removeClass( 'btn-danger' ).addClass( 'btn-info' );;
+	}
+	$( '.jumbotron' ).toggleClass( 'faded' );
+};
+
+function playSoundtrackMobile() {
+	//window.console.log('qwerty');
+	$( '#soundtrack-mobile' ).slideToggle(1000, 'swing');
+	if( $( '#soundtrack-mobile-button' ).text() == 'Play soundtrack' ) {
+		$( '#soundtrack-mobile-button' ).text( 'Close soundtrack' ).removeClass( 'btn-info' ).addClass( 'btn-danger' );
+	} else {
+		$( '#soundtrack-mobile-button' ).text( 'Play soundtrack' ).removeClass( 'btn-danger' ).addClass( 'btn-info' );;
+	}
+	$( '.jumbotron' ).toggleClass( 'faded' );
+};
+
+function slider() {
+	$('.media-container').slick({
+		infinite: true,
+		speed: 300,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		centerMode: false,
+		arrows: false,
+		dots: true,
+		//variableWidth: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: true
+			}
+		},
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+		]
+	});
+};
+
+function castOrganiser() {
+	$( "#cast .row .cast-node:nth-child(6n)" ).after( "<div class='clearfix hidden-xs'></div>" );
+}
+
+function seeFullCast() {
+	$( "#additionalCast" ).slideToggle(1000, 'swing');
+}
+
 </script>
 </footer>
 

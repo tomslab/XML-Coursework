@@ -1,36 +1,40 @@
 <?php include('head.php'); ?>
 
-	<div class="container-fluid">
-		<div class="row">
+<div class="container-fluid">
+	<div class="row">
 
-			<?php include('sidebar.php'); ?>
+		<?php include('sidebar.php'); ?>
 
-			<main class="col-xs-12 col-md-10 col-md-offset-2">
+		<main class="col-xs-12 col-md-10 col-md-offset-2">
 
-				<div class="row">
+			<div class="row">
 
-					<div id="content"></div>
+				<div id="content"></div>
 
-				</div>
+			</div>
 
-			</main>
-		</div>
+		</main>
 	</div>
+</div>
 
 
 
-	<footer>
+<footer>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="m-xml.js"></script>
-		<script>
-			$('document').ready(function() {
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="m-xml.js"></script>
+	<script type="text/javascript" src="js/sidebar.js"></script>
+	<script>
+		$('document').ready(function() {
 
-				var genre = getQueryVariable('genre');
-				var genre = genre.replace(/%20/g, " ");
-				window.console.log(genre);
+			updateSidebar();
+			clickSidebar();
+
+			var genre = getQueryVariable('genre');
+			var genre = genre.replace(/%20/g, " ");
+			window.console.log(genre);
 
 				// var artistValue = $( '#artistChoice' ).val();
 				// window.console.log(artistValue);
@@ -42,22 +46,27 @@
 
 			});
 
-			function getQueryVariable(variable) {
-				var query = window.location.search.substring(1);
-				var vars = query.split("&");
-				for (var i=0;i<vars.length;i++) {
-					var pair = vars[i].split("=");
-					if(pair[0] == variable){return pair[1];}
-				}
-				return(false);
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
 			}
+			return(false);
+		}
 
-			function updateList(value) {
-				$( '#content' ).html('<div id="content-inner"></div>');
-				magicXML.transformAndReplace("#content-inner", "movies.xml", "genre.xslt", [{ "name" : "genre", "value": value }]);
-			};
-		</script>
-	</footer>
+		function updateSidebar() {
+			$( 'nav' ).html('<div id="nav-inner"></div>');
+			magicXML.transformAndReplace("#nav-inner", "movies.xml", "sidebar.xslt");
+		};
+
+		function updateList(value) {
+			$( '#content' ).html('<div id="content-inner"></div>');
+			magicXML.transformAndReplace("#content-inner", "movies.xml", "genre.xslt", [{ "name" : "genre", "value": value }]);
+		};
+	</script>
+</footer>
 
 </body>
 
